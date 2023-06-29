@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 //conexion con la base de datos de Mongo
 mongoose 
 //.connect('mongodb://127.0.0.1:27017/empleadosds01sv22')
-.connect('mongodb+srv://raulgvti20:<1234>@ds01.uivduap.mongodb.net/empleadosds01sv22?retryWrites=true&w=majority')
+.connect('mongodb+srv://raulgvti20:<1234>@ds01.uivduap.mongodb.net/ds01?retryWrites=true&w=majority')
 .then((x) => {
     console.log(`Conectado exitosamente a la Base de Datos: "${x.connections[0].name}"`)
 })
