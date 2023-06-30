@@ -3,7 +3,6 @@ const app = express()
 const empleadoRuta = express.Router()
 
 //declaramos un objeto del modelo
-let empleado = require ('../models/Empleado')
 //const Empleado = require('../models/Empleado')
 let Empleado = require('../models/Empleado')
 
