@@ -6,17 +6,6 @@ const empleadoRuta = express.Router()
 //const Empleado = require('../models/Empleado')
 let Empleado = require('../models/Empleado')
 
-//agregar un nuevo empleado
-/* empleadoRuta.route('/create').post((req,res,next) =>{
-    Empleado.create(req.body,(error,data) =>{
-        if(error){
-            return next(error)
-        }else(
-            res.json(data)
-        )
-    })
-})
-*/
 
 //agregar un nuevo empleado
 empleadoRuta.route('/create').post((req,res)=>{
@@ -30,17 +19,6 @@ empleadoRuta.route('/create').post((req,res)=>{
     })
 })
 
-/*
-//obtenemos todos los empleados 
-empleadoRuta.route('/empleados').get((req,res,next) =>{
-    Empleado.find((error,data) =>{
-        if(error){
-            return next(error)
-        }else {
-            res.json(data)
-        }
-    })
-}) */
 
 //obtenemos todos los empleados
 empleadoRuta.route('/empleados').get((req,res)=>{
@@ -54,20 +32,6 @@ empleadoRuta.route('/empleados').get((req,res)=>{
 })
 
 
-
-/*
-//obtener un solo empleado por su id
-empleadoRuta.route('/empleado/:id').get((req,res,next) => {
-    Empleado.findById(req.params.id,(error,data) => {
-        if(error){
-            return next(error)
-        }else{
-            res.json(data)
-        }
-    })
-}) 
-*/
-
 //obtenemos un solo empleado por su id
 empleadoRuta.route('/empleado/:id').get((req,res,next)=>{
     Empleado.findById(req.params.id)
@@ -79,24 +43,6 @@ empleadoRuta.route('/empleado/:id').get((req,res,next)=>{
     })    
 })
 
-
-
-
-
-/*
-//actualizar un empleado
-empleadoRuta.route('/update/:id').put((req,res,next) =>{
-    Empleado.findByIdAndUpdate(req.params.id,{
-        $set: req.body
-    },(error,data) => {
-        if(error){
-            return next(error)
-        }else {
-            res.json(data)
-        }
-    })
-})
-*/
 
 //actualizar
 empleadoRuta.route('/update/:id').put((req,res) => {
@@ -111,19 +57,6 @@ empleadoRuta.route('/update/:id').put((req,res) => {
     })
 })
 
-
-/*
-//eliminar empleado
-empleadoRuta.route('delete/:id').delete((req,res,next) => {
-    Empleado.findByIdAndRemove(req.params.id,(error,data) => {
-        if(error){
-            return next(error)
-        }else{
-            res.json(data)
-        }
-    })
-})
-*/
 
 //eliminar
 empleadoRuta.route('/delete/:id').delete((req,res) => {
